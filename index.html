@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hayaati Biryani Restaurant</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header with Logo and Navigation -->
+	<header>
+		<div class="header-content">
+			<!-- Logo and Restaurant Name Container -->
+			<div class="logo-container">
+				<img src="images/logo.png" alt="Hayaati Logo" class="logo">
+				<span class="restaurant-name">Hayaati Biryani Restaurant</span>
+			</div>
+
+			<!-- Hamburger Menu for Mobile Devices -->
+			<div class="hamburger-menu" onclick="toggleMenu()">
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+
+			<nav>
+				<a href="#about">About Us</a>
+				<a href="#menu">Menu</a>
+				<a href="#testimonials">Testimonials</a>
+				<a href="#contact">Contact Us</a>
+			</nav>
+		</div>
+	</header>
+
+
+    <!-- Image Carousel Banner -->
+    <section class="carousel">
+        <div class="carousel-image" style="background-image: url('images/biryani1.jpg');"></div>
+        <div class="carousel-image" style="background-image: url('images/biryani2.jpg');"></div>
+        <div class="carousel-image" style="background-image: url('images/biryani3.jpg');"></div>
+		<div class="carousel-image" style="background-image: url('images/biryani4.jpg');"></div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="about">
+        <h2>About Us</h2>
+        <p>
+			Welcome to <strong>Hayaati Biryani</strong>, your new favorite destination for an unforgettable dining experience. Established in 2024, we are dedicated to bringing you the finest flavors from across the world, with a special focus on our signature biryani. Located in a beautifully designed space inspired by Arabic themes, our restaurant offers a warm and welcoming atmosphere for both casual dining and special occasions.<br>
+			At Hayaati Biryani, we don’t just hire cooks – we train them to perfection. Every dish served is a result of meticulous care and expertise, ensuring that each bite meets our high standards of quality and taste. Our multi-cuisine menu offers a variety of dishes, but our biryani remains the star, crafted with authentic spices and ingredients that transport you straight to the heart of tradition.<br>
+			Whether you're enjoying a meal in our clean, ambient dine-in space, taking food to go, or placing a bulk order for a special event, our commitment to exceptional customer service and excellence in food is unwavering.<br>
+			<strong>Come, let us make your dining experience memorable at Hayaati Biryani – where passion for food meets tradition in every dish.</strong>
+		</p>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu">
+        <h2 class="section-title">Our Menu</h2>
+        <div class="menu-container">
+            <!-- Menu Image Thumbnail -->
+            <img src="images/menu-card.jpg" alt="Menu" class="menu-card-image" onclick="openModal(this)">
+        </div>
+    </section>
+
+    <!-- Full-Image Modal -->
+    <div id="menuModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="fullImage">
+    </div>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <h2 class="section-title">What Our Customers Say</h2>
+        <div class="testimonial-slider">
+            <div class="testimonial">"The best biryani I've ever had!" - Aisha R.</div>
+            <div class="testimonial">"Absolutely delicious, worth every penny!" - Omar K.</div>
+            <div class="testimonial">"A luxurious dining experience with authentic flavors." - Leena M.</div>
+        </div>
+    </section>
+
+    <!-- Contact Information in Footer -->
+	<footer id="contact" class="footer">
+		<div class="footer-container">
+			<div class="footer-column">
+				<h3>Contact Us</h3>
+				<p>Email: info@hayaati.com</p>
+				<p>Phone: +123-456-7890</p>
+				<p>Address: 123 Biryani St., Food City</p>
+			</div>
+			<div class="footer-column">
+				<h3>Opening Hours</h3>
+				<p>Monday - Friday: 11am - 10pm</p>
+				<p>Saturday - Sunday: 12pm - 11pm</p>
+			</div>
+			<div class="footer-column map">
+				<h3>Find Us</h3>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2007011.5563988907!2d76.76769969925716!3d10.738765164489577!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00793ad1cc1c73%3A0x3ef30f45a7419e7e!2sHayaati%20Biryani%20Restaurant!5e0!3m2!1sen!2sin!4v1731509785842!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
+			</div>
+		</div>
+		<p>&copy; 2024 Hayaati Biryani Restaurant. All Rights Reserved | Designed by Pixelatives</p>
+	</footer>
+
+	
+    <script src="script.js"></script>
+</body>
+</html>

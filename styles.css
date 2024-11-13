@@ -1,0 +1,298 @@
+/* Base Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    color: #333;
+}
+/* Header Styling */
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background-color: #004d40; /* Emerald green background */
+    color: #fff;
+    position: relative;
+}
+
+/* Logo and Restaurant Name Container */
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 60px;
+    margin-right: 1rem; /* Space between logo and restaurant name */
+}
+
+.restaurant-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #d4af37; /* Gold color */
+}
+
+/* Navigation Styling */
+.header-content nav {
+    display: flex;
+    align-items: center;
+}
+
+.header-content nav a {
+    margin: 0 1rem;
+    color: #f5f5f5;
+    text-decoration: none;
+}
+/* Hamburger Menu Styling */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.hamburger-menu div {
+    width: 30px;
+    height: 3px; /* Thin lines */
+    background-color: #fff;
+    border-radius: 5px; /* Rounded edges */
+    transition: all 0.3s ease-in-out; /* Smooth transition */
+}
+
+/* Animation for Menu (when clicked) */
+.hamburger-menu.open div:nth-child(1) {
+    transform: translateY(9px) rotate(45deg); /* First line rotates */
+}
+
+.hamburger-menu.open div:nth-child(2) {
+    opacity: 0; /* Middle line fades out */
+}
+
+.hamburger-menu.open div:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg); /* Third line rotates */
+}
+
+/* Media Queries for Responsiveness */
+
+/* Tablets */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header-content nav {
+        display: none; /* Hide nav by default */
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    .header-content nav.active {
+        display: block;
+    }
+
+    .hamburger-menu {
+        display: flex;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    .logo-container {
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 1rem; /* Space between logo and name when stacked */
+    }
+
+    .restaurant-name {
+        font-size: 1.2rem; /* Smaller font size for mobile */
+        margin-top: 0.5rem;
+    }
+}
+
+/* Mobile Phones */
+@media (max-width: 480px) {
+    .header-content {
+        padding: 1rem;
+    }
+
+    .header-content nav a {
+        margin: 0.5rem;
+    }
+
+    .hamburger-menu {
+        top: 10px;
+        right: 10px;
+    }
+
+    .restaurant-name {
+        font-size: 1rem; /* Even smaller font for very small screens */
+    }
+}
+
+/* Carousel */
+.carousel {
+    display: flex;
+    overflow: hidden;
+    height: 80vh;
+    position: relative;
+}
+
+.carousel-image {
+    min-width: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.5s ease;
+}
+
+/* About Us Section */
+.about {
+    padding: 2rem;
+    background-color: #f5f5f5; /* Light background for about section */
+    text-align: center;
+	font-size: 0.6rem;
+}
+
+/* Menu Section */
+.menu {
+    text-align: center;
+    padding: 2rem;
+}
+
+.menu .section-title {
+    font-size: 2.5rem;
+    color: #004d40; /* Emerald green color */
+}
+
+.menu-container {
+    display: flex;
+    justify-content: center;
+}
+
+.menu-card-image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    cursor: pointer;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Testimonials */
+.testimonials {
+    text-align: center;
+    padding: 2rem;
+}
+
+.testimonial-slider {
+    display: flex;
+    overflow-x: auto;
+    gap: 1rem;
+}
+
+.testimonial {
+    min-width: 250px;
+    padding: 1rem;
+    border-radius: 8px;
+    background-color: #e0f2f1;
+}
+
+/* Footer Styling */
+footer {
+    background: #333;
+    color: #d4af37;
+    padding: 2rem 1.5rem;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    margin-bottom: 1.5rem;
+    gap: 1rem;
+}
+
+.footer-column {
+    flex: 1;
+    padding: 0 1rem;
+}
+
+.footer-column h3 {
+    color: #d4af37;
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.footer-column p {
+    margin: 0.5rem 0;
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+.map iframe {
+    width: 100%;
+    height: 150px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Footer Responsive Design */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .header-content nav a {
+        margin: 0 0.5rem;
+    }
+    .carousel {
+        height: 60vh;
+    }
+    .menu .section-title, .testimonials .section-title {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel {
+        height: 50vh;
+    }
+    .footer-column {
+        flex: 1 100%;
+    }
+}
